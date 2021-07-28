@@ -1,0 +1,111 @@
+body{
+    font-size:13px!important;
+    overflow: hidden;
+}
+
+.syn-function{
+    color:#e75555!important;
+    font-weight: bold;
+}
+.syn-var{
+    color: #0d6efd!important;
+}
+.syn-string{
+    color: #6a6b6c!important;
+}
+
+.loader {
+    width: 2.64vmin;
+    height: 3.0vmin;
+    position: relative;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    animation: rotate 12000ms 1800ms linear reverse infinite;
+  }
+  .loader::after {
+    content: "";
+    position: absolute;
+    top: -6vmin;
+    right: -6vmin;
+    bottom: -6vmin;
+    left: -6vmin;
+    background: conic-gradient(from -60deg, #ffb800 0deg 120deg, #7b1857 120deg 240deg, #00b6b6 240deg);
+    -webkit-animation: rotate 6000ms linear infinite;
+            animation: rotate 6000ms linear infinite;
+  }
+  @-webkit-keyframes rotate {
+    0% {
+      transform: rotate3d(0, 0, 1, 0deg);
+    }
+    7%, 33.3333% {
+      transform: rotate3d(0, 0, 1, 120deg);
+    }
+    40.3333%, 66.6666% {
+      transform: rotate3d(0, 0, 1, 240deg);
+    }
+    73.6666%, 100% {
+      transform: rotate3d(0, 0, 1, 360deg);
+    }
+  }
+  
+@keyframes rotate {
+    0% {
+      transform: rotate3d(0, 0, 1, 0deg);
+    }
+    7%, 33.3333% {
+      transform: rotate3d(0, 0, 1, 120deg);
+    }
+    40.3333%, 66.6666% {
+      transform: rotate3d(0, 0, 1, 240deg);
+    }
+    73.6666%, 100% {
+      transform: rotate3d(0, 0, 1, 360deg);
+    }
+}
+.screen{
+    background-color: #000!important;
+    width: 100%;
+    height: 100%;
+    color: #FFF;
+}
+.cli-body{
+  display: none;
+  height: 100%;
+  width: 100%;
+  border:solid 1px;
+  margin: auto;
+  bottom: 0px;
+  position: fixed;
+  padding: 7px;
+  cursor: text;
+  overflow: auto;
+  background-color: #000000b8;
+  color:#ffffff
+}
+#cli-value {
+  width: 90%;
+  background: #fff0;
+  color: #ffffff00 !important;
+  caret-color: #fff;
+  z-index: 101;
+  position: absolute;
+  margin-left: 118px;
+  top: 7px;
+  border: solid 0px;
+}
+#cli-value :hover,#cli-value:focus{
+  outline: none;
+}
+.cli_user{
+  color: #3dd000;
+  font-weight: 700;
+  margin-right: 5px;
+}
+.icon{
+  width: 64px;
+  height: 64px;
+  cursor:pointer;
+}
+.screen{
+  padding: 15px;
+}
